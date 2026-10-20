@@ -1,17 +1,13 @@
 # Cognitive Load Monitoring System
 
-An ESP32-based wearable that reads [SENSORS] and sends data to AWS for [PURPOSE].
+An ESP32-based smartwatch that reads temperature, acceleration, and SpO₂ and sends the data to AWS for fatigue detection and health-status alerts.
 
 ## Design
 
-- **Sensing:** [which sensors, how they are read]
-- **Data path:** ESP32 → AWS IoT Core → [Lambda / DynamoDB / SNS, only what the code uses]
-- **Processing:** [describe the filtering or threshold logic as it appears in the code]
-
-## Results
-
-[Only what you measured or observed, e.g. data rate, alert behaviour]
+- **Sensing:** Temperature, accelerometer, and SpO₂ sensors on an ESP32
+- **Data path:** ESP32 → AWS IoT Core → Lambda → DynamoDB → SNS
+- **Processing:** Real-time filtering and threshold logic to reduce false alerts
 
 ## Tools
 
-ESP32, Arduino IDE / PlatformIO, AWS IoT Core, [others you actually used]
+ESP32, AWS IoT Core, AWS Lambda, DynamoDB, SNS
